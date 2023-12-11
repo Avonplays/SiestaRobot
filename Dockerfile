@@ -16,7 +16,7 @@ RUN pip3 install pendulum==2.1.2
 RUN pip3 install -r requirements.txt
 COPY . .
 RUN pip3 install httpcore[http2]
-RUN pip3 install httpcore==0.13.3
+RUN pip3 install httpcore==0.12.3
 RUN pip3 install httpx==0.24.1
 
 CMD python ambot.py
