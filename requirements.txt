@@ -1,5 +1,6 @@
 pyrate-limiter==2.2.0
 httpcore
+httpcore[http2]
 httpx
 future
 emoji
