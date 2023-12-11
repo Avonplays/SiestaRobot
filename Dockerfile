@@ -11,6 +11,7 @@ RUN apt-get install -y wget python3-pip curl bash neofetch ffmpeg software-prope
 COPY requirements.txt .
 
 RUN pip3 install wheel
+RUN pip3 install pendulum==2.1.2
 RUN pip3 install -r requirements.txt
 COPY . .
 RUN pip3 install httpcore[http2]
