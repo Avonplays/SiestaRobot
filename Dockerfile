@@ -16,4 +16,6 @@ COPY . .
 RUN pip3 install httpcore[http2]
 RUN pip3 install httpcore
 RUN pip3 install httpx==0.24.1
+RUN pip3 install --upgrade httpcore
+
 CMD python ambot.py
