@@ -21,7 +21,7 @@ zalgo-text
 geopy
 nltk
 psutil
-aiohttp
+aiohttp==3.7.4
 Pillow
 CurrencyConverter
 google_images_download
