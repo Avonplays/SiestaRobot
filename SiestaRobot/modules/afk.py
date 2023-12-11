@@ -149,14 +149,10 @@ def check_afk(update, context, user_id, fst_name, userc_id):
 
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk, run_async=True)
-AFK_REGEX_HANDLER = DisableAbleMessageHandler(
-    Filters.regex(r"^(?i)brb(.*)$"), afk, friendly="afk", run_async=True
-)
 NO_AFK_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, no_longer_afk)
 AFK_REPLY_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, reply_afk)
 
 dispatcher.add_handler(AFK_HANDLER, AFK_GROUP)
-dispatcher.add_handler(AFK_REGEX_HANDLER, AFK_GROUP)
 dispatcher.add_handler(NO_AFK_HANDLER, AFK_GROUP)
 dispatcher.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
 
