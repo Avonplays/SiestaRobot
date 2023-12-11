@@ -1,4 +1,4 @@
-pyrate-limiter==1.0.6 
+pyrate-limiter==2.2.0
 future
 emoji
 lxml
