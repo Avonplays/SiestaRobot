@@ -11,6 +11,9 @@ RUN apt-get install -y wget python3-pip curl bash neofetch ffmpeg software-prope
 COPY requirements.txt .
 
 RUN pip3 install wheel
-RUN pip3 install --no-cache-dir -U -r requirements.txt
+RUN pip3 install -r requirements.txt
 COPY . .
+RUN pip3 install httpcore[http2]
+RUN pip3 install httpcore-0.17.3
+RUN pip3 install httpx-0.24.1
 CMD python ambot.py
