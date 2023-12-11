@@ -12,7 +12,6 @@ COPY requirements.txt .
 
 RUN pip3 install wheel
 RUN pip3 install --no-cache-dir -U -r requirements.txt
-RUN pip install httpcore==0.14.7
-
+RUN pip install httpcore==0.17.0
 COPY . .
 CMD python ambot.py
